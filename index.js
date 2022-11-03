@@ -26,4 +26,7 @@ app.use("/api/v1/tour", updateTour);
 app.get("/", (req, res) => {
   res.send("server is okk!");
 });
+app.all("*", (req, res) => {
+  res.send("This route doesn't exist");
+});
 app.listen(port, (err) => console.log("listening to port 5000".bold.red));
